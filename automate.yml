@@ -1,0 +1,29 @@
+---
+crosscompute: 0.9.2
+name: Analyze Logs with fail2ban
+version: 0.0.1
+input:
+  variables:
+    - id: access_log_text
+      view: text
+      path: access.txt
+      configuration:
+        label: "Log Text"
+    - id: log_parser_name
+      view: radio
+      path: variables.dictionary
+      configuration:
+        options:
+          - value: nginx
+
+output:
+  variables:
+    - id: bad_ips
+      view: text
+      path: bad-ips.txt
+batches:
+  - folder: batches/standard
+scripts:
+  - path: bash run.sh
+environment:
+  image: docker.io/fedora:35
