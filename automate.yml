@@ -24,6 +24,7 @@ output:
 batches:
   - folder: batches/standard
 scripts:
-  - path: bash run.sh
+  - command: bash run.sh
 environment:
+  engine: podman
   image: docker.io/fedora:35
