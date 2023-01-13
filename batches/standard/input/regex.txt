@@ -1,0 +1,9 @@
+^<HOST> - (-|[^ ]+) \[[(\d\w\/: \+\-]*\] "(?!GET|POST|HEAD|PATCH|PUT|DELETE|OPTIONS|CONNECT|TRACE).*$
+^<HOST> - (-|[^ ]+) \[[(\d\w\/: \+\-]*\] "(GET|POST|HEAD|PATCH|PUT|DELETE|OPTIONS|CONNECT|TRACE) ([^/]|\\).*$
+^<HOST> - (-|[^ ]+) \[[(\d\w\/: \+\-]*\] "(GET|POST|HEAD|PATCH|PUT|DELETE|OPTIONS|CONNECT|TRACE) /[$'%%:].*$
+^<HOST> - (-|[^ ]+) \[[(\d\w\/: \+\-]*\] "(GET|POST|HEAD|PATCH|PUT|DELETE|OPTIONS|CONNECT|TRACE) /.*(/home/|/etc/|/bin/|/lib/).*$
+^<HOST> - (-|[^ ]+) \[[(\d\w\/: \+\-]*\] "(GET|POST|HEAD|PATCH|PUT|DELETE|OPTIONS|CONNECT|TRACE) /.*[.](sh|ini|env|zip|dll|pem|git|aspx?|jsa|jsp).*$
+^<HOST> - (-|[^ ]+) \[[(\d\w\/: \+\-]*\] "(GET|POST|HEAD|PATCH|PUT|DELETE|OPTIONS|CONNECT|TRACE) /.*(php|pma|laravel|drupal|magento).*$
+^<HOST> - (-|[^ ]+) \[[(\d\w\/: \+\-]*\] "(GET|POST|HEAD|PATCH|PUT|DELETE|OPTIONS|CONNECT|TRACE) /.*(curl|wget|cmd|bash|cron|eval|export).*$
+^<HOST> - (-|[^ ]+) \[[(\d\w\/: \+\-]*\] "(GET|POST|HEAD|PATCH|PUT|DELETE|OPTIONS|CONNECT|TRACE) /.*(/flu|nmap|[.]aws|credentials|cgi).*$
+^<HOST> - (-|[^ ]+) \[[(\d\w\/: \+\-]*\] "(GET|POST|HEAD|PATCH|PUT|DELETE|OPTIONS|CONNECT|TRACE) /.*/../.*$

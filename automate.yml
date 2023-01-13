@@ -9,12 +9,9 @@ input:
       path: access.log
       configuration:
         label: "Log Text"
-    - id: log_parser_name
-      view: radio
-      path: variables.dictionary
-      configuration:
-        options:
-          - value: nginx
+    - id: filter_regex
+      view: text
+      path: regex.txt
 
 output:
   variables:
