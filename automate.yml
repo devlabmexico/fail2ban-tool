@@ -18,6 +18,10 @@ output:
     - id: bad_ips
       view: text
       path: bad-ips.txt
+    - id: bad_uris
+      view: text
+      path: bad-uris.txt
+
 batches:
   - folder: batches/standard
 scripts:

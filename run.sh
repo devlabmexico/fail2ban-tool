@@ -37,4 +37,5 @@ cp -r /etc/fail2ban/filter.d .
 cd filter.d
 #sleep 600
 fail2ban-regex ../${INPUT_DIR}/access.log  ../nginx-access.conf --print-all-matched | awk '/^\|  [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/ { print $2 }' | sort | uniq -c > ../${OUTPUT_DIR}/bad-ips.txt
+fail2ban-regex ../${INPUT_DIR}/access.log  ../nginx-access.conf --print-all-matched | awk '/^\|  [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/ { print $0 }' | sed 's/|  //'  > ../${OUTPUT_DIR}/bad-uris.txt
 #fail2ban-regex ../${INPUT_DIR}/access.log ../nginx-access.conf --print-all-matched > ../${OUTPUT_DIR}/bad-ips.txt
