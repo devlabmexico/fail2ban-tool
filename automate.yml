@@ -12,7 +12,6 @@ input:
     - id: filter_regex
       view: text
       path: regex.txt
-
 output:
   variables:
     - id: bad_ips
@@ -21,14 +20,13 @@ output:
     - id: bad_uris
       view: text
       path: bad-uris.txt
-
 batches:
   - folder: batches/standard
 scripts:
   - command: bash run.sh
 environment:
   engine: podman
-  image: docker.io/fedora:35
+  image: docker.io/fedora:37
   packages:
     - id: fail2ban
       manager: dnf
