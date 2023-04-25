@@ -25,7 +25,7 @@ scripts:
   - command: bash run.sh
 environment:
   engine: podman
-  image: docker.io/fedora:37
+  image: docker.io/fedora:38
   packages:
     - id: fail2ban
       manager: dnf
