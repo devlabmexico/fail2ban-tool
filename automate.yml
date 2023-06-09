@@ -11,6 +11,8 @@ input:
     - id: filter_regex
       view: text
       path: regex.txt
+  templates:
+    - path: input.md
 output:
   variables:
     - id: bad_ips
@@ -19,6 +21,8 @@ output:
     - id: bad_uris
       view: text
       path: bad-uris.txt
+  templates:
+    - path: output.md
 batches:
   - folder: batches/standard
 scripts:
