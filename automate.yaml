@@ -4,7 +4,8 @@ name: Test fail2ban filter regular expression on server logs
 slug: test-fail2ban-filter-regular-expression
 description: Test a regular expression that you can use in your fail2ban filters using extracts of your server logs
 version: 0.0.1
-attribution_text: "[Development Laboratories México](https://www.devlabs.com.mx) @ 2023"
+copyright:
+  text: "[Development Laboratories México](https://www.devlabs.com.mx) @ 2023"
 input:
   variables:
     - id: access_log_text
